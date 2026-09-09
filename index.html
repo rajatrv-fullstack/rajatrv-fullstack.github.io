@@ -7,255 +7,269 @@
 <meta name="description" content="CISO. Co-designed the cryptography behind Login.gov. AWS shipped two of my solutions as product features. The full record, with receipts.">
 <meta property="og:title" content="Rajat Ravinder Varuni">
 <meta property="og:description" content="CISO, cryptographer, builder. The full record, with receipts.">
-<meta property="og:type" content="profile">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#070B14; --bg2:#0C1322; --card:#111A2E; --card2:#16203A;
-  --ink:#EAF0FF; --ink2:#9AAACB; --ink3:#64769B;
-  --line:#1E2B47;
-  --cyan:#22D3EE; --violet:#A78BFA; --amber:#FBBF24;
-  --emerald:#34D399; --rose:#FB7185; --blue:#60A5FA; --lime:#A3E635;
-  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
-  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;
+  --ink:#0A0A0A;
+  --panel:#141414;
+  --line:#242424;
+  --line2:#363636;
+  --paper:#F1F0EB;
+  --dim:#8C8C86;
+  --dim2:#5E5E58;
+  --sig:#FF4A1C;
+  --disp:'Archivo Black','Arial Black',sans-serif;
+  --sans:'Archivo',-apple-system,'Helvetica Neue',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;background:var(--ink)}
 body{
-  margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
-  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  margin:0;background:var(--ink);color:var(--paper);
+  font-family:var(--sans);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
 }
-a{color:var(--cyan);text-decoration:none}
-a:hover{text-decoration:underline}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 34px}
+@media(max-width:640px){.wrap{padding:0 20px}}
 
-/* ---------- animated backdrop ---------- */
-.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
-.aurora i{position:absolute;border-radius:50%;filter:blur(90px);animation:drift 22s ease-in-out infinite}
-.aurora i:nth-child(1){width:520px;height:520px;background:#1E3A8A;top:-160px;left:-120px}
-.aurora i:nth-child(2){width:440px;height:440px;background:#4C1D95;top:120px;right:-140px;animation-delay:-7s}
-.aurora i:nth-child(3){width:380px;height:380px;background:#0E7490;bottom:-120px;left:30%;animation-delay:-13s}
-@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.12)}}
-@media (prefers-reduced-motion:reduce){.aurora i{animation:none}}
-main{position:relative;z-index:1}
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim2)}
+.sig{color:var(--sig)}
 
-/* ---------- hero ---------- */
-header{padding:96px 0 56px}
-.kicker{
-  font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--cyan);margin-bottom:22px;
-}
-h1{
-  font-size:clamp(44px,8vw,86px);line-height:.96;letter-spacing:-.035em;margin:0 0 20px;
-  background:linear-gradient(100deg,#fff 10%,var(--cyan) 42%,var(--violet) 72%,var(--rose) 96%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.roles{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
-.role{
-  font-family:var(--mono);font-size:12.5px;padding:6px 12px;border-radius:999px;
-  border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--ink2);
-}
-.role.a{color:var(--cyan);border-color:rgba(34,211,238,.4);background:rgba(34,211,238,.08)}
-.role.b{color:var(--violet);border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.08)}
-.role.c{color:var(--amber);border-color:rgba(251,191,36,.4);background:rgba(251,191,36,.08)}
-.role.d{color:var(--emerald);border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.08)}
-.role.e{color:var(--rose);border-color:rgba(251,113,133,.4);background:rgba(251,113,133,.08)}
-.lede{font-size:clamp(17px,2.1vw,21px);color:var(--ink2);max-width:70ch;margin:0 0 30px}
-.lede b{color:var(--ink);font-weight:600}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.btn{
-  display:inline-block;padding:11px 20px;border-radius:10px;font-weight:600;font-size:14.5px;
-  border:1px solid var(--line);background:var(--card);color:var(--ink);transition:.18s;
-}
-.btn:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--cyan);color:var(--cyan)}
-.btn.p{background:linear-gradient(100deg,var(--cyan),var(--violet));color:#06101F;border:none}
-.btn.p:hover{color:#06101F;filter:brightness(1.1)}
+/* ---------------- masthead ---------------- */
+.mast{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,10,10,.94);backdrop-filter:blur(6px);z-index:60}
+.mast .wrap{display:flex;justify-content:space-between;align-items:center;height:54px}
+.mast .n{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.mast .n b{color:var(--sig);font-weight:400}
+.mast nav{display:flex;gap:24px}
+.mast nav a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none}
+.mast nav a:hover{color:var(--sig)}
+@media(max-width:820px){.mast nav{display:none}}
 
-/* ---------- stat band ---------- */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:14px 0 8px}
-.stat{
-  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;
-  position:relative;overflow:hidden;transition:.2s;
+/* ---------------- hero ---------------- */
+.hero{padding-top:76px}
+.hero h1{
+  font-family:var(--disp);font-weight:400;
+  font-size:clamp(54px,13.6vw,182px);line-height:.83;letter-spacing:-.05em;
+  text-transform:uppercase;margin:0 0 38px;
 }
-.stat:hover{transform:translateY(-3px);border-color:var(--ink3)}
-.stat::before{content:'';position:absolute;inset:0 0 auto 0;height:3px;background:var(--c)}
-.stat .n{font-size:34px;font-weight:800;letter-spacing:-.03em;color:var(--c);line-height:1.05}
-.stat .l{font-size:12.5px;color:var(--ink2);margin-top:8px;line-height:1.45}
+.hero h1 em{font-style:normal;display:block;color:var(--sig)}
+.heroGrid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;padding-bottom:62px}
+@media(max-width:940px){.heroGrid{grid-template-columns:1fr;gap:34px}}
+.claim{font-size:clamp(19px,2.4vw,26px);line-height:1.4;margin:0 0 24px;max-width:33ch;font-weight:500}
+.claim b{font-weight:700;box-shadow:inset 0 -.42em 0 rgba(255,74,28,.22)}
+.sub{color:var(--dim);max-width:50ch;margin:0;font-size:16px}
+.meta{border-top:2px solid var(--sig);padding-top:20px}
+.meta dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:11px 24px;font-size:14.5px}
+.meta dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim2);padding-top:4px}
+.meta dd{margin:0}
+.meta a{color:var(--sig);text-decoration:none;border-bottom:1px solid rgba(255,74,28,.4)}
+.meta a:hover{background:var(--sig);color:#0A0A0A;border-bottom-color:var(--sig)}
 
-/* ---------- sections ---------- */
-section{padding:64px 0;border-top:1px solid var(--line)}
-.eyebrow{
-  font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--c);margin-bottom:12px;display:flex;align-items:center;gap:10px;
-}
-.eyebrow::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--c),transparent)}
-h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.025em;margin:0 0 14px;line-height:1.15}
-.sub{color:var(--ink2);max-width:74ch;margin:0 0 30px;font-size:16.5px}
+/* ---------------- number strip ---------------- */
+.figs{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.figs .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-top:0;padding-bottom:0}
+@media(max-width:880px){.figs .wrap{grid-template-columns:repeat(2,1fr)}}
+.fig{padding:30px 24px 30px 0;border-right:1px solid var(--line)}
+.fig:last-child{border-right:none}
+@media(max-width:880px){.fig:nth-child(2){border-right:none}.fig:nth-child(1),.fig:nth-child(2){border-bottom:1px solid var(--line)}}
+.fig .v{font-family:var(--disp);font-size:clamp(31px,4.5vw,52px);line-height:1;letter-spacing:-.035em}
+.fig .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim2);margin-top:12px;line-height:1.55}
 
-.grid{display:grid;gap:16px}
-.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+/* ---------------- sections ---------------- */
+section{padding:92px 0;border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:190px 1fr;gap:44px;margin-bottom:54px}
+@media(max-width:880px){.head{grid-template-columns:1fr;gap:14px;margin-bottom:36px}}
+.head h2{font-family:var(--disp);font-weight:400;text-transform:uppercase;
+  font-size:clamp(30px,4.8vw,58px);line-height:.92;letter-spacing:-.04em;margin:0}
+.head p{margin:16px 0 0;color:var(--dim);max-width:62ch;font-size:16.5px}
 
-.card{
-  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;
-  transition:.2s;position:relative;
-}
-.card:hover{border-color:var(--c);transform:translateY(-3px)}
-.card h3{margin:0 0 10px;font-size:18px;letter-spacing:-.015em;color:var(--ink)}
-.card p{margin:0 0 12px;color:var(--ink2);font-size:15px}
-.card p:last-child{margin-bottom:0}
-.tag{
-  display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--c);border:1px solid var(--c);
-  padding:3px 9px;border-radius:999px;margin-bottom:14px;opacity:.9;
-}
-.receipt{
-  display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;
-  color:var(--ink2);border:1px dashed var(--line);border-radius:8px;padding:6px 11px;
-  margin:6px 6px 0 0;transition:.15s;
-}
-.receipt:hover{color:var(--c);border-color:var(--c);text-decoration:none;background:rgba(255,255,255,.03)}
-.receipt::before{content:'\2197';font-size:13px;opacity:.75}
+.entry{display:grid;grid-template-columns:190px 1fr;gap:44px;padding:36px 0;border-top:1px solid var(--line)}
+.entry:first-of-type{border-top:none;padding-top:0}
+@media(max-width:880px){.entry{grid-template-columns:1fr;gap:14px}}
+.entry h3{font-size:23px;font-weight:700;letter-spacing:-.02em;margin:0 0 13px;line-height:1.2}
+.entry p{margin:0 0 15px;color:#C9C9C2;max-width:68ch}
+.entry p:last-child{margin-bottom:0}
+.entry b{color:var(--paper);font-weight:700}
+.aside .n{font-family:var(--disp);font-size:40px;line-height:.95;letter-spacing:-.04em;color:var(--sig)}
+.aside .t{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim2);margin-top:10px;line-height:1.6}
 
-/* ---------- badges ---------- */
-.badges{display:flex;flex-wrap:wrap;gap:10px}
-.badge{
-  display:flex;align-items:stretch;border-radius:8px;overflow:hidden;
-  font-family:var(--mono);font-size:12px;border:1px solid var(--line);
-}
-.badge span{padding:7px 11px}
-.badge .k{background:#0A1220;color:var(--ink2)}
-.badge .v{color:#06101F;font-weight:700}
+.src{display:flex;flex-wrap:wrap;gap:10px 12px;margin-top:20px}
+.src a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--dim);text-decoration:none;border:1px solid var(--line2);padding:8px 12px;transition:.15s}
+.src a:hover{color:#0A0A0A;background:var(--sig);border-color:var(--sig)}
+.src a::after{content:' \2197';opacity:.55}
 
-/* ---------- timeline ---------- */
-.tl{position:relative;padding-left:30px}
-.tl::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;
-  background:linear-gradient(180deg,var(--cyan),var(--violet),var(--rose))}
-.tl .row{position:relative;padding:0 0 26px}
-.tl .row::before{
-  content:'';position:absolute;left:-30px;top:7px;width:16px;height:16px;border-radius:50%;
-  background:var(--bg);border:3px solid var(--c);
-}
-.tl .yr{font-family:var(--mono);font-size:12px;color:var(--c);letter-spacing:.1em}
-.tl .ttl{font-weight:650;margin:2px 0 4px;font-size:16.5px}
-.tl .d{color:var(--ink2);font-size:14.5px}
+/* ---------------- artifacts ---------------- */
+figure{margin:0;border:1px solid var(--line);background:var(--panel)}
+figure img{display:block;width:100%;height:auto}
+figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--dim2);padding:13px 15px;border-top:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:start}
+@media(max-width:880px){.split{grid-template-columns:1fr;gap:22px}}
+.split.flip{grid-template-columns:1.15fr 1fr}
+@media(max-width:880px){.split.flip{grid-template-columns:1fr}}
 
-/* ---------- quote ---------- */
-.quote{
-  border-left:3px solid var(--c);padding:4px 0 4px 20px;margin:0 0 16px;
-  color:var(--ink);font-size:16px;font-style:italic;
-}
-.quote cite{display:block;font-style:normal;font-size:13px;color:var(--ink3);margin-top:7px;font-family:var(--mono)}
+/* ---------------- orange band ---------------- */
+.band{background:var(--sig);color:#0A0A0A;padding:78px 0;border-bottom:1px solid var(--line)}
+.band .q{font-family:var(--disp);font-weight:400;
+  font-size:clamp(25px,4.1vw,50px);line-height:1.03;letter-spacing:-.035em;margin:0 0 26px;max-width:19ch}
+.band .attr{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(10,10,10,.72)}
+.band .bg{display:grid;grid-template-columns:190px 1fr;gap:44px}
+@media(max-width:880px){.band .bg{grid-template-columns:1fr;gap:16px}}
+.band .lab{color:rgba(10,10,10,.6)}
 
-footer{border-top:1px solid var(--line);padding:44px 0 60px;color:var(--ink3);font-size:14px}
-footer a{color:var(--ink2)}
-.foot-links{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:18px}
-.note{font-size:12.5px;color:var(--ink3);font-family:var(--mono);margin-top:10px}
-@media(max-width:640px){header{padding:60px 0 40px}section{padding:48px 0}}
+/* ---------------- paper band ---------------- */
+.paper{background:var(--paper);color:#0A0A0A;padding:92px 0;border-bottom:1px solid var(--line)}
+.paper .head h2{color:#0A0A0A}
+.paper .head p{color:#4A4A44}
+.paper .lab{color:#8A8A80}
+.paper .entry{border-top-color:#D8D7D0}
+.paper .entry p{color:#39392F}
+.paper .entry b{color:#0A0A0A}
+.paper .aside .t{color:#8A8A80}
+.paper .src a{color:#4A4A44;border-color:#C9C8C0}
+.paper .src a:hover{color:#F1F0EB;background:#0A0A0A;border-color:#0A0A0A}
+.certs{display:flex;flex-wrap:wrap;gap:24px 26px;align-items:center;margin:2px 0 26px}
+.certs img{height:96px;width:auto;transition:transform .18s}
+.certs img:hover{transform:translateY(-5px) scale(1.05)}
+.chip{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  border:1.5px solid #0A0A0A;padding:12px 15px;display:inline-block}
+.chip.on{background:#0A0A0A;color:var(--paper)}
+
+/* ---------------- timeline ---------------- */
+.tl{border-top:1px solid var(--line)}
+.tr{display:grid;grid-template-columns:190px 1fr;gap:44px;padding:26px 0;border-bottom:1px solid var(--line)}
+@media(max-width:880px){.tr{grid-template-columns:1fr;gap:8px}}
+.tr .y{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--sig);padding-top:5px}
+.tr h4{margin:0 0 6px;font-size:19.5px;font-weight:700;letter-spacing:-.015em}
+.tr p{margin:0;color:var(--dim);max-width:66ch;font-size:15.5px}
+
+/* ---------------- footer ---------------- */
+footer{padding:70px 0 96px}
+.fl{display:flex;flex-wrap:wrap;gap:10px 12px;margin-bottom:30px}
+.fl a{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--paper);text-decoration:none;border:1px solid var(--line2);padding:11px 15px;transition:.15s}
+.fl a:hover{color:#0A0A0A;background:var(--sig);border-color:var(--sig)}
+.fine{font-family:var(--mono);font-size:11.5px;line-height:1.8;color:var(--dim2);max-width:66ch;margin:16px 0 0}
 </style>
 </head>
 <body>
-<div class="aurora"><i></i><i></i><i></i></div>
 
-<main>
-<header class="wrap">
-  <div class="kicker">Aldie, Virginia &nbsp;/&nbsp; Washington DC metro</div>
-  <h1>Rajat Ravinder<br>Varuni</h1>
-  <div class="roles">
-    <span class="role a">CISO</span>
-    <span class="role b">Cryptographer</span>
-    <span class="role c">Agentic AI Builder</span>
-    <span class="role d">Judge</span>
-    <span class="role e">Inventor</span>
-    <span class="role">Author</span>
+<div class="mast">
+  <div class="wrap">
+    <span class="n">Varuni<b>.</b></span>
+    <nav>
+      <a href="#proof">Proof</a>
+      <a href="#commercial">Commercial</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#published">Published</a>
+      <a href="#built">Built</a>
+      <a href="#path">Path</a>
+    </nav>
   </div>
-  <p class="lede">
-    I co-designed the cryptography behind <b>Login.gov</b>. Amazon shipped two of my
-    published solutions as product features. I certified ISO 27001 on the first attempt
-    with <b>zero nonconformities</b>, and I run agentic AI in production under live audit.
-    Below is the full record, and every claim links to the thing that proves it.
-  </p>
-  <div class="cta">
-    <a class="btn p" href="#receipts">See the receipts</a>
-    <a class="btn" href="https://www.linkedin.com/in/rajatrv/">LinkedIn</a>
-    <a class="btn" href="https://thefullstackciso.pages.dev">The Full Stack CISO</a>
-    <a class="btn" href="https://github.com/rajatrv-fullstack">GitHub</a>
-  </div>
-</header>
+</div>
 
-<section class="wrap" style="border-top:none;padding-top:12px">
-  <div class="stats">
-    <div class="stat" style="--c:var(--cyan)">
-      <div class="n">180M+</div>
-      <div class="l">user accounts protected by cryptography I co-designed</div>
+<div class="hero wrap">
+  <h1>Rajat<br>Ravinder<br><em>Varuni</em></h1>
+  <div class="heroGrid">
+    <div>
+      <p class="claim">
+        I co-designed the cryptography behind <b>Login.gov</b>. Amazon shipped two of my
+        published solutions as product features. I certified ISO 27001 on the first attempt
+        with <b>zero nonconformities</b>.
+      </p>
+      <p class="sub">
+        Everything below links to the thing that proves it, and most of that proof was
+        published by somebody other than me.
+      </p>
     </div>
-    <div class="stat" style="--c:var(--violet)">
-      <div class="n">700+</div>
-      <div class="l">live government sites and services running on it</div>
-    </div>
-    <div class="stat" style="--c:var(--emerald)">
-      <div class="n">Zero</div>
-      <div class="l">nonconformities, ISO 27001:2022, first attempt</div>
-    </div>
-    <div class="stat" style="--c:var(--amber)">
-      <div class="n">4 hrs</div>
-      <div class="l">from detection to contained on an AI insider incident</div>
-    </div>
-    <div class="stat" style="--c:var(--rose)">
-      <div class="n">2</div>
-      <div class="l">of my open-source solutions productized by AWS</div>
-    </div>
-    <div class="stat" style="--c:var(--blue)">
-      <div class="n">97</div>
-      <div class="l">countries served by the platform I secure today</div>
+    <div class="meta">
+      <dl>
+        <dt>Role</dt><dd>CISO and Senior Director, Operations</dd>
+        <dt>Also</dt><dd>Cryptographer, builder, judge, named inventor</dd>
+        <dt>Based</dt><dd>Aldie, Virginia. Washington DC metro.</dd>
+        <dt>Now</dt><dd>Carnegie Mellon CISO Executive Certificate, Cohort 27</dd>
+        <dt>Find me</dt>
+        <dd>
+          <a href="https://www.linkedin.com/in/rajatrv/">LinkedIn</a> &nbsp;
+          <a href="https://github.com/rajatrv-fullstack">GitHub</a> &nbsp;
+          <a href="https://thefullstackciso.pages.dev">Blog</a>
+        </dd>
+      </dl>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ============ RECEIPTS ============ -->
-<section class="wrap" id="receipts" style="--c:var(--cyan)">
-  <div class="eyebrow">Verifiable</div>
-  <h2>The receipts</h2>
-  <p class="sub">
-    A resume asserts. This page proves. Every claim here links to a primary source you can
-    open right now, most of them published by someone other than me.
-  </p>
+<div class="figs">
+  <div class="wrap">
+    <div class="fig"><div class="v">180M<span class="sig">+</span></div><div class="k">accounts protected by cryptography I co-designed</div></div>
+    <div class="fig"><div class="v">700<span class="sig">+</span></div><div class="k">live government sites and services running on it</div></div>
+    <div class="fig"><div class="v">ZERO</div><div class="k">nonconformities, ISO 27001, first attempt</div></div>
+    <div class="fig"><div class="v">4<span class="sig">HR</span></div><div class="k">detection to contained, AI insider incident</div></div>
+  </div>
+</div>
 
-  <div class="grid g2">
-    <div class="card" style="--c:var(--cyan)">
-      <span class="tag">National scale</span>
+<!-- ============ 01 PROOF ============ -->
+<section id="proof"><div class="wrap">
+  <div class="head">
+    <div class="lab">01 / Proof</div>
+    <div>
+      <h2>Claims,<br>with receipts</h2>
+      <p>A resume asserts. This page links. Every source below opens in one click, and none of it was written by me.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="aside"><div class="n">180M+</div><div class="t">User accounts</div></div>
+    <div>
       <h3>The cryptography behind Login.gov</h3>
       <p>
-        As Security Architect at AWS, I partnered with the GSA CISO to design a
+        As Security Architect at AWS I partnered with the GSA CISO to design a
         NIST-peer-reviewed, two-layer cryptographic scheme for Login.gov. It seals each
-        person's data under their own password, so it stays private even from privileged
-        insiders.
+        person's data under their own password, so it stays private <b>even from privileged
+        insiders</b>.
       </p>
       <p>
-        Login.gov's own August 2026 program roadmap puts the service at
-        <b>180+ million user accounts</b>, <b>500+ million sign-ins a year</b>,
-        <b>700+ live sites and services</b> and <b>54 agencies and states</b>.
+        Login.gov's own August 2026 program roadmap puts the service at 180+ million user
+        accounts, 500+ million sign-ins a year, 700+ live sites and services, and 54
+        agencies and states.
       </p>
-      <a class="receipt" href="https://login.gov/docs/login-gov-roadmap-august-2026.pdf">Login.gov roadmap, Aug 2026 (PDF)</a>
-      <a class="receipt" href="https://www.gsa.gov/about-us/newsroom/news-releases/gsas-logingov-launches-passportbased-identity-verification-08202025">GSA press release</a>
+      <div class="src">
+        <a href="https://login.gov/docs/login-gov-roadmap-august-2026.pdf">Login.gov roadmap, Aug 2026</a>
+        <a href="https://www.gsa.gov/about-us/newsroom/news-releases/gsas-logingov-launches-passportbased-identity-verification-08202025">GSA press release</a>
+      </div>
     </div>
+  </div>
 
-    <div class="card" style="--c:var(--violet)">
-      <span class="tag">Federal precedent</span>
+  <div class="entry">
+    <div class="aside"><div class="n">Passed</div><div class="t">FedRAMP office review</div></div>
+    <div>
       <h3>Cloud security at federal scale</h3>
       <p>
         I led the TIC 2.0 Overlay pilot as Security Officer at 18F, proving federal systems
         could meet Trusted Internet Connection requirements while running on native cloud
-        services. Run with DHS, Sandia National Laboratories, the FedRAMP office and AWS.
+        services, assessed against NIST SP 800-53. Run with DHS, Sandia National
+        Laboratories, the FedRAMP office and AWS.
       </p>
       <p>
-        <b>It passed FedRAMP office review</b>, and I presented the findings at AWS re:Invent 2015.
-        FedRAMP authorizations followed for Login.gov, cloud.gov and vote.gov.
+        It passed, and I presented the findings at AWS re:Invent 2015. FedRAMP
+        authorizations followed for Login.gov, cloud.gov and vote.gov.
       </p>
-      <a class="receipt" href="https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/fy2008/m08-05.pdf">OMB Memorandum M-08-05</a>
+      <div class="src">
+        <a href="https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/fy2008/m08-05.pdf">OMB Memorandum M-08-05</a>
+      </div>
     </div>
+  </div>
 
-    <div class="card" style="--c:var(--rose)">
-      <span class="tag">Adopted by the vendor</span>
+  <div class="entry">
+    <div class="aside"><div class="n">2</div><div class="t">Solutions productized by AWS</div></div>
+    <div>
       <h3>Amazon built my work into the product</h3>
       <p>
         I published geographic filtering for AWS WAF as an official AWS sample. It proved
@@ -263,288 +277,365 @@ footer a{color:var(--ink2)}
         <b>AWS built the capability into the product itself</b>.
       </p>
       <p>
-        Separately, my GuardDuty threat-intelligence automation was adopted into Login.gov's
-        live security operations, and my S3 defense-in-depth guide ranked eighth of 125 posts
-        on the AWS Security Blog that year and was cited publicly by Amazon's CTO.
+        My GuardDuty threat-intelligence automation was adopted into Login.gov's live
+        security operations. My S3 defense-in-depth guide ranked eighth of 125 posts on the
+        AWS Security Blog that year, and was cited publicly by Amazon's CTO.
       </p>
-      <a class="receipt" href="https://aws.amazon.com/about-aws/whats-new/2017/10/aws-waf-now-supports-geographic-match/">AWS WAF geographic match release</a>
-      <a class="receipt" href="https://aws.amazon.com/blogs/security/how-to-use-aws-waf-to-filter-incoming-traffic-from-embargoed-countries/">The original post</a>
+      <div class="src">
+        <a href="https://aws.amazon.com/about-aws/whats-new/2017/10/aws-waf-now-supports-geographic-match/">The AWS release</a>
+        <a href="https://aws.amazon.com/blogs/security/how-to-use-aws-waf-to-filter-incoming-traffic-from-embargoed-countries/">The original post</a>
+        <a href="https://aws.amazon.com/blogs/security/how-to-automate-import-third-party-threat-intelligence-feeds-into-amazon-guardduty/">GuardDuty automation</a>
+      </div>
     </div>
+  </div>
 
-    <div class="card" style="--c:var(--emerald)">
-      <span class="tag">Audit</span>
+  <div class="entry">
+    <div class="aside"><div class="n">None<br>Noted</div><div class="t">Audit result, 2024 and 2025</div></div>
+    <div>
       <h3>The auditors left without a finding</h3>
       <p>
-        ISO 27001:2022 certified on the <b>first attempt with zero nonconformities</b>, ISOQAR
-        Stage 2 under UKAS accreditation. The 2024 and 2025 cycles across HIPAA, SOC 2 Type II,
-        ISO 27001, GDPR, CCPA and LGPD all closed with results recorded as "None Noted".
+        ISO 27001:2022 certified on the first attempt with zero nonconformities, ISOQAR
+        Stage 2 under UKAS accreditation. The 2024 and 2025 cycles across HIPAA, SOC 2 Type
+        II, ISO 27001, GDPR, CCPA and LGPD all closed with results recorded as "None Noted".
       </p>
       <p>
-        I did not build these frameworks from nothing. I inherited them, carried ISO 27001 from
-        the 2013 standard to 2022, took PCI DSS to 4.0.1, and added UKAS accreditation plus the
-        EU, UK and Swiss privacy frameworks, without disrupting a customer or a certification.
+        I did not build these frameworks from nothing. I inherited them, carried ISO 27001
+        from the 2013 standard to 2022, took PCI DSS to 4.0.1, and added UKAS accreditation
+        plus the EU, UK and Swiss privacy frameworks, without disrupting a customer or a
+        certification.
       </p>
     </div>
+  </div>
 
-    <div class="card" style="--c:var(--amber)">
-      <span class="tag">AI in production</span>
+  <div class="entry">
+    <div class="aside"><div class="n">89</div><div class="t">Control gaps I put in front of my own CEO</div></div>
+    <div>
       <h3>Agentic AI, running under live audit</h3>
       <p>
         A fifteen-agent security platform runs in production, chaining triage, enrichment,
-        response and case-writing across fifteen accounts against a data lake, with a budget
-        killswitch. Autonomous endpoint triage closes verified false positives daily under a
-        hard rule that it may never auto-close anything touching credential access, with the
-        SOC 2 reasoning logged for every run.
+        response and case-writing across fifteen accounts, with a budget killswitch.
+        Autonomous endpoint triage closes verified false positives daily under a hard rule
+        that it may <b>never</b> auto-close anything touching credential access, and the
+        SOC 2 reasoning is logged for every run.
       </p>
       <p>
-        I activated the <b>ISO/IEC 42001</b> AI management control set in June 2025, ahead of
-        demand. Nine months later it answered AI governance gates for two enterprise accounts.
-        An honest self-assessment surfaced <b>89 control gaps across 17 domains</b>, and I put
-        that number in front of the CEO rather than burying it.
+        I activated the ISO/IEC 42001 AI management control set in June 2025, ahead of
+        demand. Nine months later it answered AI governance gates for two enterprise
+        accounts. An honest self-assessment surfaced 89 control gaps across 17 domains,
+        and I took that number to the CEO rather than burying it.
       </p>
     </div>
+  </div>
 
-    <div class="card" style="--c:var(--blue)">
-      <span class="tag">Incident command</span>
-      <h3>Four hours, no customer impact</h3>
+  <div class="entry">
+    <div class="aside"><div class="n">4 hrs</div><div class="t">No customer impact</div></div>
+    <div>
+      <h3>An AI insider incident, contained the same afternoon</h3>
       <p>
-        An insider moved company data into an unsanctioned AI tool. It was contained the same
-        afternoon, in four hours, with no customer impact and no notification required.
+        An insider moved company data into an unsanctioned AI tool. It was contained in four
+        hours, with no customer impact and no notification required.
       </p>
       <p>
-        What changed afterwards matters more than the containment. It triggered a full AI
-        governance build: every platform AI capability touching customer data inventoried, an
-        AI Use Policy written in-house that superseded the version outside counsel drafted, and
-        org-wide guardrails with a board-approved primary tool.
+        What changed afterwards matters more. It triggered a full AI governance build: every
+        platform AI capability touching customer data inventoried, an AI Use Policy written
+        in-house that superseded the version outside counsel drafted, and org-wide guardrails
+        with a board-approved primary tool.
       </p>
     </div>
   </div>
-</section>
+</div></section>
 
-<!-- ============ SECURITY AS REVENUE ============ -->
-<section class="wrap" style="--c:var(--lime)">
-  <div class="eyebrow">Commercial</div>
-  <h2>Security that speeds the deal up</h2>
-  <p class="sub">
-    Most security leaders describe themselves as business enablers. Here is the evidence,
-    with ticket numbers behind it.
-  </p>
-  <div class="grid g3">
-    <div class="card" style="--c:var(--lime)">
-      <h3>Two weeks to five days</h3>
-      <p>Enterprise security review time, cut by more than half. The last two cleared three days ahead of the customer's deadline.</p>
-    </div>
-    <div class="card" style="--c:var(--lime)">
-      <h3>246 questions, minutes</h3>
-      <p>A Cigna diligence pack closed in minutes rather than weeks, with 175 of 218 questions auto-answered from a maintained library.</p>
-    </div>
-    <div class="card" style="--c:var(--lime)">
-      <h3>Roughly ten to one</h3>
-      <p>First-year deal value attributed to the security program, against its tooling spend. Enterprise reviews cleared for Cigna, BT and Centene.</p>
+<!-- ============ ORANGE BAND ============ -->
+<div class="band"><div class="wrap"><div class="bg">
+  <div class="lab">Vanta, March 2025</div>
+  <div>
+    <p class="q">Rajat has revolutionized government security, shaping Vote.gov and Login.gov with cutting-edge compliance automation and encryption strategies.</p>
+    <div class="attr">25 to Trust Award citation</div>
+  </div>
+</div></div></div>
+
+<!-- ============ 02 COMMERCIAL ============ -->
+<section id="commercial"><div class="wrap">
+  <div class="head">
+    <div class="lab">02 / Commercial</div>
+    <div>
+      <h2>Security that<br>speeds deals up</h2>
+      <p>Every security leader calls themselves a business enabler. Here is what that actually looked like, with ticket numbers behind it.</p>
     </div>
   </div>
-</section>
 
-<!-- ============ RECOGNITION ============ -->
-<section class="wrap" style="--c:var(--amber)">
-  <div class="eyebrow">Recognition</div>
-  <h2>What other people said</h2>
-  <p class="sub">None of this is self-assessment.</p>
-
-  <div class="grid g2">
-    <div class="card" style="--c:var(--amber)">
-      <h3>Vanta 25 to Trust Award, 2025</h3>
-      <p class="quote">
-        Rajat has revolutionized government security, shaping Vote.gov and Login.gov with
-        cutting-edge compliance automation and encryption strategies.
-        <cite>Vanta, March 2025</cite>
-      </p>
-    </div>
-    <div class="card" style="--c:var(--violet)">
-      <h3>The Modern CISO Network: Board Book</h3>
+  <div class="entry">
+    <div class="aside"><div class="n">5 days</div><div class="t">Down from two weeks</div></div>
+    <div>
+      <h3>Enterprise security review, cut by more than half</h3>
       <p>
-        Selected for the third edition of the directory boards use to find cybersecurity
-        expertise. Published by Lacework and carried in the New York Times.
+        The last two reviews cleared three days ahead of the customer's deadline. A
+        246-question Cigna diligence pack closed in minutes rather than weeks, with 175 of
+        218 questions auto-answered from a maintained library.
       </p>
-    </div>
-    <div class="card" style="--c:var(--cyan)">
-      <h3>SANS Technology Institute</h3>
-      <p class="quote">
-        The best-written paper on this subject to date.
-        <cite>Stephen Northcutt, then President and CEO, SANS Technology Institute</cite>
-      </p>
-    </div>
-    <div class="card" style="--c:var(--emerald)">
-      <h3>CISO Series Podcast</h3>
       <p>
-        I wrote the "What's Worse?!" scenario for the August 2026 episode. It split the hosts,
-        which is the best result that segment can produce.
+        Internal attribution put first-year deal value at roughly <b>ten times</b> the
+        security tooling spend. Enterprise reviews cleared for Cigna, BT and Centene.
       </p>
-      <a class="receipt" href="https://cisoseries.com/why-solve-your-problems-when-we-can-just-scare-you/">Listen to the episode</a>
     </div>
   </div>
-</section>
 
-<!-- ============ PUBLISHED ============ -->
-<section class="wrap" style="--c:var(--violet)">
-  <div class="eyebrow">Published and peer review</div>
-  <h2>Writing, editing, judging</h2>
-  <p class="sub">
-    Eleven years of deciding what met the bar for publication, and a standards document with
-    a number on it.
-  </p>
-  <div class="grid g3">
-    <div class="card" style="--c:var(--violet)">
-      <h3>A published standard</h3>
-      <p>Co-authored ISAO 300-2, on automating cyber threat intelligence sharing, for the ISAO Standards Organization.</p>
-      <a class="receipt" href="https://www.isao.org/products/isao-300-2-automated-cyber-threat-intelligence-sharing/">ISAO 300-2</a>
-    </div>
-    <div class="card" style="--c:var(--cyan)">
-      <h3>AWS Security Blog</h3>
-      <p>Three published guides on WAF, GuardDuty and S3. Two shipped with open-source code as official AWS samples.</p>
-      <a class="receipt" href="https://aws.amazon.com/blogs/security/how-to-automate-import-third-party-threat-intelligence-feeds-into-amazon-guardduty/">GuardDuty automation</a>
-    </div>
-    <div class="card" style="--c:var(--amber)">
-      <h3>SANS whitepapers</h3>
-      <p>Two papers: disaster recovery for continuity of operations, 2010, sole author; and cloud security monitoring, 2017.</p>
-      <a class="receipt" href="https://www.sans.org/white-papers/33373/">One Touch Disaster Recovery</a>
-    </div>
-    <div class="card" style="--c:var(--rose)">
-      <h3>McGraw-Hill</h3>
-      <p>Technical editor on two AWS certification guides: Security Specialty and Developer Associate.</p>
-    </div>
-    <div class="card" style="--c:var(--emerald)">
-      <h3>ISACA, highest honours</h3>
-      <p>Judged the Global Achievement Awards for an association serving 140,000 professionals across 180 countries. Journal reviewer since 2018.</p>
-    </div>
-    <div class="card" style="--c:var(--blue)">
-      <h3>Eleven years of peer review</h3>
-      <p>Editorial board, Journal of Information Systems Education. Reviewer for the ACM. Academic advisor to a graduate cybersecurity certification program.</p>
+  <div class="entry">
+    <div class="aside"><div class="n">10 days<br>to zero</div><div class="t">Pre-sales response time</div></div>
+    <div>
+      <h3>The bottleneck was email, so I removed the email</h3>
+      <p>
+        I built sales a self-service trust portal and retired the queue that ran through my
+        inbox. Pre-sales security response went from ten days to immediately available. That
+        is one fewer reason for a deal to stall on my desk.
+      </p>
     </div>
   </div>
-</section>
+</div></section>
 
-<!-- ============ BUILT ============ -->
-<section class="wrap" style="--c:var(--emerald)">
-  <div class="eyebrow">Built</div>
-  <h2>I still ship</h2>
-  <p class="sub">
-    A CISO who can read the engineer's pull request, because he has opened a few.
-  </p>
-  <div class="grid g3">
-    <div class="card" style="--c:var(--emerald)">
-      <h3>CertScore</h3>
-      <p>Credential verification that checks a certification against the issuer that granted it, rather than taking the claim on trust. Live on the App Store and Google Play.</p>
-      <a class="receipt" href="https://certscore.org">certscore.org</a>
-    </div>
-    <div class="card" style="--c:var(--cyan)">
-      <h3>Honor Library</h3>
-      <p>Book sharing inside trusted circles, on a give-economy model. Live on both stores.</p>
-      <a class="receipt" href="https://honorlibrary.org">honorlibrary.org</a>
-    </div>
-    <div class="card" style="--c:var(--amber)">
-      <h3>Patent pending</h3>
-      <p>Named inventor on a pending U.S. patent for third-party verification of digital credential ownership.</p>
-    </div>
-    <div class="card" style="--c:var(--violet)">
-      <h3>V2C.org</h3>
-      <p>Founded a 501(c)(3) nonprofit, and built and shipped its products.</p>
-      <a class="receipt" href="https://v2c.org">v2c.org</a>
-    </div>
-    <div class="card" style="--c:var(--rose)">
-      <h3>Two controls, written personally</h3>
-      <p>An AI change-review agent that reads a proposed change's intent and blast radius and returns a rated risk. Secrets-leakage detection wired through the company password manager.</p>
-    </div>
-    <div class="card" style="--c:var(--blue)">
-      <h3>re:Invent hackathon winner</h3>
-      <p>Won the AWS re:Invent hackathon in 2014, building an application that identifies features in photographs from the Mars rovers. Amazon announced it themselves, and the post is still live.</p>
-      <a class="receipt" href="https://x.com/AWSEvents/status/532439404476764160">The announcement</a>
+<!-- ============ 03 RECOGNITION ============ -->
+<section id="recognition"><div class="wrap">
+  <div class="head">
+    <div class="lab">03 / Recognition</div>
+    <div>
+      <h2>What other<br>people said</h2>
+      <p>None of this is self-assessment. Two of them are printed objects.</p>
     </div>
   </div>
-</section>
 
-<!-- ============ CERTIFICATIONS ============ -->
-<section class="wrap" style="--c:var(--blue)">
-  <div class="eyebrow">Credentials</div>
-  <h2>Certifications</h2>
-  <p class="sub">
-    All five AWS certifications by December 2016, when fewer than seventy people outside
-    Amazon had done it. Certificate numbers are four digits.
-  </p>
-  <div class="badges">
-    <span class="badge"><span class="k">ISC2</span><span class="v" style="background:var(--cyan)">CISSP</span></span>
-    <span class="badge"><span class="k">ISACA</span><span class="v" style="background:var(--emerald)">CISM</span></span>
-    <span class="badge"><span class="k">EC-Council</span><span class="v" style="background:var(--rose)">C|CISO</span></span>
-    <span class="badge"><span class="k">HITRUST</span><span class="v" style="background:var(--violet)">CCSFP</span></span>
-    <span class="badge"><span class="k">GIAC</span><span class="v" style="background:var(--amber)">GPEN</span></span>
-    <span class="badge"><span class="k">EC-Council</span><span class="v" style="background:var(--blue)">CEH</span></span>
-    <span class="badge"><span class="k">AWS</span><span class="v" style="background:var(--lime)">Security Specialty</span></span>
-    <span class="badge"><span class="k">DDN</span><span class="v" style="background:var(--cyan)">Boardroom QTE</span></span>
-  </div>
-  <p class="note">
-    HITRUST CCSFP and GIAC GPEN are the two that still differentiate at this level.
-    CISSP and CISM are table stakes, and I would rather you knew that from me.
-  </p>
-</section>
-
-<!-- ============ TIMELINE ============ -->
-<section class="wrap" style="--c:var(--cyan)">
-  <div class="eyebrow">Path</div>
-  <h2>How it went</h2>
-  <div class="tl" style="margin-top:26px">
-    <div class="row" style="--c:var(--rose)">
-      <div class="yr">2026, in progress</div>
-      <div class="ttl">Carnegie Mellon, Heinz College</div>
-      <div class="d">CISO Executive Certificate, Cohort 27. Six months.</div>
-    </div>
-    <div class="row" style="--c:var(--amber)">
-      <div class="yr">2024 to now</div>
-      <div class="ttl">CISO and Senior Director, Operations</div>
-      <div class="d">SuccessKPI. Security, IT, SRE, DevOps and a 24x7 NOC across two continents. Quarterly board reporting, risk priced in dollars rather than heat maps.</div>
-    </div>
-    <div class="row" style="--c:var(--emerald)">
-      <div class="yr">2023</div>
-      <div class="ttl">Principal Security Architect, then CISO</div>
-      <div class="d">SuccessKPI. Two promotions in nineteen months.</div>
-    </div>
-    <div class="row" style="--c:var(--cyan)">
-      <div class="yr">2017 to 2023</div>
-      <div class="ttl">Security Architect, Amazon Web Services</div>
-      <div class="d">Login.gov cryptography, GuardDuty automation, WAF geographic filtering. Zero direct reports, and the work reached 180 million accounts.</div>
-    </div>
-    <div class="row" style="--c:var(--violet)">
-      <div class="yr">2015 to 2017</div>
-      <div class="ttl">Security Officer, 18F</div>
-      <div class="d">TIC 2.0 Overlay pilot. FedRAMP authorizations for Login.gov, cloud.gov and vote.gov.</div>
-    </div>
-    <div class="row" style="--c:var(--blue)">
-      <div class="yr">2006 to 2017</div>
-      <div class="ttl">Systems, network engineering and IT management</div>
-      <div class="d">Veris Group, Valiant Solutions, Dataprise, Community Connections, AACAP, Anacomp, University of Maryland Global Campus.</div>
-    </div>
-    <div class="row" style="--c:var(--ink3)">
-      <div class="yr">2000 to 2006</div>
-      <div class="ttl">Michigan Tech, then George Washington University</div>
-      <div class="d">B.S. and M.S. in Computer Science.</div>
+  <div class="split" style="margin-bottom:56px">
+    <figure>
+      <img src="img/board-book.jpeg" alt="The Modern CISO Network Board Book page as carried in the New York Times" loading="lazy">
+      <figcaption>The Board Book, carried in the New York Times</figcaption>
+    </figure>
+    <div>
+      <h3 style="font-size:23px;font-weight:700;letter-spacing:-.02em;margin:0 0 13px">Selected for the Board Book</h3>
+      <p style="color:#C9C9C2;max-width:52ch;margin:0 0 15px">
+        Chosen for the third edition of The Modern CISO Network: Board Book, the directory
+        boards use to find cybersecurity expertise, published by Lacework and carried in the
+        New York Times.
+      </p>
+      <p style="color:#C9C9C2;max-width:52ch;margin:0">
+        Somebody else decided that list was worth a page in that newspaper. I am on it.
+      </p>
     </div>
   </div>
-</section>
 
-<footer class="wrap">
-  <div class="foot-links">
+  <div class="split flip">
+    <div>
+      <h3 style="font-size:23px;font-weight:700;letter-spacing:-.02em;margin:0 0 13px">Amazon announced it themselves</h3>
+      <p style="color:#C9C9C2;max-width:52ch;margin:0 0 15px">
+        I won the AWS re:Invent hackathon in 2014, building an application that identifies
+        features in photographs sent back by the Mars rovers. Amazon posted the result, and
+        the post is still live twelve years later.
+      </p>
+      <div class="src" style="margin-top:18px">
+        <a href="https://x.com/AWSEvents/status/532439404476764160">The AWS announcement</a>
+      </div>
+    </div>
+    <figure>
+      <img src="img/aws-tweet.jpg" alt="Amazon Web Services announcing the re:Invent 2014 hackathon winners" loading="lazy">
+      <figcaption>re:Invent 2014, the winners on stage</figcaption>
+    </figure>
+  </div>
+
+  <div class="entry" style="border-top:1px solid var(--line);margin-top:56px">
+    <div class="aside"><div class="t">SANS Technology Institute</div></div>
+    <div>
+      <p style="font-size:clamp(20px,2.7vw,31px);line-height:1.32;margin:0 0 14px;max-width:24ch;font-weight:500">
+        <span class="sig">&ldquo;</span>The best-written paper on this subject to date.<span class="sig">&rdquo;</span>
+      </p>
+      <div class="lab">Stephen Northcutt, then President and CEO</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="aside"><div class="t">CISO Series, Aug 2026</div></div>
+    <div>
+      <h3>I wrote the scenario that split the hosts</h3>
+      <p>
+        My "What's Worse?!" scenario ran on the CISO Series podcast. The hosts disagreed with
+        each other on air, which is the best outcome that segment can produce.
+      </p>
+      <div class="src">
+        <a href="https://cisoseries.com/why-solve-your-problems-when-we-can-just-scare-you/">The episode</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 04 CREDENTIALS, PAPER BAND ============ -->
+<div class="paper" id="credentials"><div class="wrap">
+  <div class="head">
+    <div class="lab">04 / Credentials</div>
+    <div>
+      <h2>Eight badges,<br>two that matter</h2>
+      <p>All five AWS certifications by December 2016, when fewer than seventy people outside Amazon had done it.</p>
+    </div>
+  </div>
+
+  <div class="certs">
+    <img src="img/CISSP.png" alt="ISC2 CISSP" loading="lazy">
+    <img src="img/CISM.png" alt="ISACA CISM" loading="lazy">
+    <img src="img/HITRUST-CCSFP.png" alt="HITRUST Certified CSF Practitioner" loading="lazy">
+    <img src="img/GIAC-GPEN.png" alt="GIAC GPEN, Penetration Tester" loading="lazy">
+    <img src="img/AWS-Security-Specialty.png" alt="AWS Certified Security, Specialty" loading="lazy">
+    <img src="img/CCISO.png" alt="EC-Council Certified CISO" loading="lazy">
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px">
+    <span class="chip on">CEH</span>
+    <span class="chip on">Boardroom Certified QTE</span>
+    <span class="chip">CMU Heinz, CISO Executive Certificate, in progress</span>
+  </div>
+
+  <div class="entry" style="border-top:1px solid #D8D7D0">
+    <div class="aside"><div class="t">The honest read</div></div>
+    <div>
+      <p>
+        <b>HITRUST CCSFP and GIAC GPEN</b> are the two that still differentiate at this
+        level: one is the healthcare framework nobody wants to sit through, the other is a
+        hands-on penetration testing exam. CISSP and CISM are table stakes, and I would
+        rather you heard that from me than worked it out yourself.
+      </p>
+    </div>
+  </div>
+</div></div>
+
+<!-- ============ 05 PUBLISHED ============ -->
+<section id="published"><div class="wrap">
+  <div class="head">
+    <div class="lab">05 / Published</div>
+    <div>
+      <h2>Writing,<br>editing, judging</h2>
+      <p>Eleven years deciding what met the bar for publication, and a standards document with a number on it.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="aside"><div class="t">Standards</div></div>
+    <div>
+      <h3>ISAO 300-2</h3>
+      <p>Co-authored a published standard on automating cyber threat intelligence sharing, for the ISAO Standards Organization.</p>
+      <div class="src"><a href="https://www.isao.org/products/isao-300-2-automated-cyber-threat-intelligence-sharing/">The standard</a></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="aside"><div class="t">Papers and guides</div></div>
+    <div>
+      <h3>SANS, AWS, McGraw-Hill</h3>
+      <p>
+        Two SANS whitepapers, the earlier one sole-authored in 2010. Three guides on the AWS
+        Security Blog, two of them shipped with open-source code as official AWS samples.
+        Technical editor on two McGraw-Hill AWS certification guides, and an author of AWS
+        certification examination questions.
+      </p>
+      <div class="src"><a href="https://www.sans.org/white-papers/33373/">One Touch Disaster Recovery, SANS</a></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="aside"><div class="n">140k</div><div class="t">Members of the body whose highest honours I judged</div></div>
+    <div>
+      <h3>Judging and peer review</h3>
+      <p>
+        Judge for the ISACA Global Achievement Awards, for an association serving 140,000
+        professionals across 180 countries, and a Journal reviewer since 2018. Eleven years
+        on the editorial board of the Journal of Information Systems Education and reviewing
+        for the ACM. Academic advisor to a graduate cybersecurity certification program.
+      </p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 06 BUILT ============ -->
+<section id="built"><div class="wrap">
+  <div class="head">
+    <div class="lab">06 / Built</div>
+    <div>
+      <h2>I still<br>ship</h2>
+      <p>A CISO who can read the engineer's pull request, because he has opened a few of his own.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="aside"><div class="t">Live on both stores</div></div>
+    <div>
+      <h3>CertScore and Honor Library</h3>
+      <p>
+        CertScore verifies a credential against the issuer that granted it, rather than
+        taking the claim on trust. Honor Library is book sharing inside trusted circles on a
+        give-economy model. Both are live on the App Store and Google Play. I founded
+        V2C.org, a 501(c)(3), and built and shipped its products.
+      </p>
+      <div class="src">
+        <a href="https://certscore.org">certscore.org</a>
+        <a href="https://honorlibrary.org">honorlibrary.org</a>
+        <a href="https://v2c.org">v2c.org</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="aside"><div class="t">Patent pending</div></div>
+    <div>
+      <h3>Named inventor</h3>
+      <p>
+        Named inventor on a pending U.S. patent for third-party verification of digital
+        credential ownership.
+      </p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="aside"><div class="n">2</div><div class="t">Production controls I wrote myself</div></div>
+    <div>
+      <h3>Not a slide deck, a pull request</h3>
+      <p>
+        An AI change-review agent that reads a proposed change's intent and blast radius and
+        returns a rated risk, and secrets-leakage detection wired through the company
+        password manager. Both are running. I wrote both.
+      </p>
+      <div class="src">
+        <a href="https://thefullstackciso.pages.dev">The Full Stack CISO, my blog</a>
+        <a href="https://github.com/rajatrv-fullstack">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 07 PATH ============ -->
+<section id="path"><div class="wrap">
+  <div class="head">
+    <div class="lab">07 / Path</div>
+    <div><h2>How it<br>went</h2></div>
+  </div>
+  <div class="tl">
+    <div class="tr"><div class="y">2026</div><div><h4>Carnegie Mellon, Heinz College</h4><p>CISO Executive Certificate, Cohort 27. Six months, in progress.</p></div></div>
+    <div class="tr"><div class="y">2024 to now</div><div><h4>CISO and Senior Director, Operations, SuccessKPI</h4><p>Security, IT, SRE, DevOps and a 24x7 NOC across two continents. Quarterly board reporting, with risk priced in dollars rather than heat maps.</p></div></div>
+    <div class="tr"><div class="y">2023</div><div><h4>Principal Security Architect, then CISO</h4><p>SuccessKPI. Two promotions in nineteen months.</p></div></div>
+    <div class="tr"><div class="y">2017 to 2023</div><div><h4>Security Architect, Amazon Web Services</h4><p>Login.gov cryptography, GuardDuty automation, WAF geographic filtering. Zero direct reports, and the work reached 180 million accounts.</p></div></div>
+    <div class="tr"><div class="y">2015 to 2017</div><div><h4>Security Officer, 18F</h4><p>The TIC 2.0 Overlay pilot. FedRAMP authorizations followed for Login.gov, cloud.gov and vote.gov.</p></div></div>
+    <div class="tr"><div class="y">2006 to 2017</div><div><h4>Systems, network engineering and IT management</h4><p>Veris Group, Valiant Solutions, Dataprise, Community Connections, AACAP, Anacomp, University of Maryland Global Campus.</p></div></div>
+    <div class="tr"><div class="y">2000 to 2006</div><div><h4>Michigan Technological University, then George Washington University</h4><p>B.S. and M.S. in Computer Science.</p></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fl">
     <a href="https://www.linkedin.com/in/rajatrv/">LinkedIn</a>
-    <a href="https://thefullstackciso.pages.dev">The Full Stack CISO</a>
     <a href="https://github.com/rajatrv-fullstack">GitHub</a>
+    <a href="https://thefullstackciso.pages.dev">The Full Stack CISO</a>
     <a href="https://certscore.org">CertScore</a>
     <a href="https://honorlibrary.org">Honor Library</a>
     <a href="https://v2c.org">V2C.org</a>
   </div>
-  <div>Rajat Ravinder Varuni. Aldie, Virginia. U.S. citizen.</div>
-  <p class="note">
-    Every figure on this page is traceable to a published source or an internal artifact with a
-    ticket number. Where a number could not be sourced, it is not here.
+  <div class="lab">Rajat Ravinder Varuni &nbsp;/&nbsp; Aldie, Virginia &nbsp;/&nbsp; U.S. citizen</div>
+  <p class="fine">
+    Every figure on this page traces to a published source or to an internal artifact with a
+    ticket number behind it. Where a number could not be sourced, it is not here.
   </p>
-</footer>
-</main>
+</div></footer>
+
 </body>
 </html>
