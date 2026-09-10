@@ -2,23 +2,34 @@
 
 > CISO and Senior Director, Operations. Co-designed the cryptography behind Login.gov. AWS shipped two of his published solutions as product features. ISO 27001 certified on the first attempt with zero nonconformities. Based in Aldie, Virginia, Washington DC metro. U.S. citizen.
 
-This site is a single page: the full professional record, with a linked source for every claim. Most of the proof was published by someone other than him.
+This site is a single page: the full professional record, with a linked source for every claim. Most of the proof was published by someone other than him. Surname is the two words "Ravinder Varuni".
 
-## Key facts
-- Login.gov: partnered with the GSA CISO on a NIST-peer-reviewed two-layer cryptographic scheme. Login.gov's August 2026 roadmap reports 180M+ accounts, 500M+ sign-ins a year, 700+ sites and services, 54 agencies and states.
-- 18F: led the TIC 2.0 Overlay pilot with DHS, Sandia National Laboratories, the FedRAMP office and AWS. FedRAMP authorizations followed for Login.gov, cloud.gov and vote.gov.
-- AWS: WAF geographic filtering he published was built into the product; GuardDuty threat-intelligence automation adopted into Login.gov operations.
-- Audits: ISO 27001:2022 first attempt, zero nonconformities, UKAS accredited; 2024 and 2025 HIPAA, SOC 2 Type II, GDPR, CCPA, LGPD cycles closed "None Noted".
-- AI: fifteen-agent security platform in production under audit; ISO/IEC 42001 activated June 2025; AI insider incident contained in four hours.
-- Recognition: Vanta 25 to Trust Award (2025); Lacework Modern CISO Network Board Book, third edition, carried in the New York Times; AWS re:Invent 2014 hackathon winner.
-- Published: ISAO 300-2 co-author; two SANS whitepapers; three AWS Security Blog guides; technical editor on two McGraw-Hill AWS certification guides; judge, ISACA Global Achievement Awards.
-- Built: CertScore and Honor Library, live on the App Store and Google Play; founder of V2C.org, a 501(c)(3); named inventor on a pending U.S. patent.
-- Certifications: CISSP, CISM, C|CISO, HITRUST CCSFP, GIAC GPEN, CEH, AWS Certified Security Specialty, Boardroom Certified QTE.
+## Proof, with sources
+- [Login.gov roadmap, August 2026](https://login.gov/docs/login-gov-roadmap-august-2026.pdf): the service he co-designed the cryptography for, at 180M+ accounts, 500M+ sign-ins a year, 700+ sites and services, 54 agencies and states
+- [GSA press release](https://www.gsa.gov/about-us/newsroom/news-releases/gsas-logingov-launches-passportbased-identity-verification-08202025): Login.gov context from the agency itself
+- [AWS WAF geographic match release](https://aws.amazon.com/about-aws/whats-new/2017/10/aws-waf-now-supports-geographic-match/): AWS built his published solution into the product
+- [The original AWS Security Blog post](https://aws.amazon.com/blogs/security/how-to-use-aws-waf-to-filter-incoming-traffic-from-embargoed-countries/): the guide that preceded the product feature
+- [GuardDuty threat-intelligence automation](https://aws.amazon.com/blogs/security/how-to-automate-import-third-party-threat-intelligence-feeds-into-amazon-guardduty/): adopted into Login.gov operations
+- [OMB Memorandum M-08-05](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/fy2008/m08-05.pdf): the Trusted Internet Connection policy his 18F pilot proved cloud could satisfy
+- [ISAO 300-2](https://www.isao.org/products/isao-300-2-automated-cyber-threat-intelligence-sharing/): the threat-intelligence sharing standard he co-authored
+- [One Touch Disaster Recovery, SANS](https://www.sans.org/white-papers/33373/): sole-authored SANS whitepaper, 2010
+- [CISO Series episode](https://cisoseries.com/why-solve-your-problems-when-we-can-just-scare-you/): his scenario on the podcast, August 2026
+- [AWS re:Invent 2014 hackathon announcement](https://x.com/AWSEvents/status/532439404476764160): the win, announced by AWS
+- [McGraw Hill letter, February 2021](https://thefullstackciso.com/evidence/mcgraw-hill-letter-2021.pdf): the publisher on his work as technical editor
 
-## Links
-- Full record: https://thefullstackciso.com/
-- LinkedIn: https://www.linkedin.com/in/rajatrv/
-- GitHub: https://github.com/rajatrv-fullstack
-- CertScore: https://certscore.org
-- Honor Library: https://honorlibrary.org
-- V2C: https://v2c.org
+## Facts in brief
+- Audits: ISO 27001:2022 first attempt, zero nonconformities, UKAS accredited; 2024 and 2025 HIPAA, SOC 2 Type II, GDPR, CCPA, LGPD cycles closed "None Noted"
+- AI: fifteen-agent security platform in production under audit; ISO/IEC 42001 activated June 2025; an AI insider incident contained in four hours
+- Recognition: Vanta 25 to Trust Award, 2025; Lacework Modern CISO Network Board Book, third edition, carried in the New York Times
+- Certifications: CISSP, CISM, C|CISO, HITRUST CCSFP, GIAC GPEN, CEH, AWS Certified Security Specialty, Boardroom Certified QTE
+- Education: M.S. Computer Science, George Washington University; B.S. Computer Science, Michigan Technological University; Carnegie Mellon CISO Executive Certificate in progress
+
+## Built
+- [CertScore](https://certscore.org): verifies a credential against the issuer that granted it; live on the App Store and Google Play
+- [Honor Library](https://honorlibrary.org): book sharing inside trusted circles; live on both stores
+- [V2C.org](https://v2c.org): the 501(c)(3) he founded
+
+## Profiles
+- [The full record](https://thefullstackciso.com/): this site
+- [LinkedIn](https://www.linkedin.com/in/rajatrv/): professional profile
+- [GitHub](https://github.com/rajatrv-fullstack): code and the profile README
