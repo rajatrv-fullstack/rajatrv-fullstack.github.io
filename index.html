@@ -85,9 +85,9 @@ a:focus-visible{outline:2px solid var(--sig);outline-offset:3px}
   .mast,.skip{display:none}
   .hero{padding-top:0}
   .band,.paper{color:#000!important;border-top:1px solid #000;border-bottom:1px solid #000}
-  .band .q,.head h2,.hero h1,.fig .v,.aside .n{color:#000!important}
+  .band .q,.head h2,.hero h1,.aside .n{color:#000!important}
   .hero h1 em,.sig,.tr .y{color:#000!important}
-  .lab,.aside .t,.fig .k,figcaption,.head p,.entry p,.tr p,.sub,.fine,.meta dt,.band .attr,.paper .lab,.paper .aside .t{color:#222!important}
+  .lab,.aside .t,figcaption,.head p,.entry p,.tr p,.sub,.fine,.meta dt,.band .attr,.paper .lab,.paper .aside .t{color:#222!important}
   .entry b{color:#000!important}
   figure{border:1px solid #999;page-break-inside:avoid}
   figure img{max-height:3.2in;width:auto}
@@ -120,15 +120,6 @@ a:focus-visible{outline:2px solid var(--sig);outline-offset:3px}
 .meta a{color:var(--sig);text-decoration:none;border-bottom:1px solid rgba(255,74,28,.4)}
 .meta a:hover{background:var(--sig);color:#0A0A0A;border-bottom-color:var(--sig)}
 
-/* ---------------- number strip ---------------- */
-.figs{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.figs .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-top:0;padding-bottom:0}
-@media(max-width:880px){.figs .wrap{grid-template-columns:repeat(2,1fr)}}
-.fig{padding:30px 24px 30px 0;border-right:1px solid var(--line)}
-.fig:last-child{border-right:none}
-@media(max-width:880px){.fig:nth-child(2){border-right:none}.fig:nth-child(1),.fig:nth-child(2){border-bottom:1px solid var(--line)}}
-.fig .v{font-family:var(--disp);font-size:clamp(31px,4.5vw,52px);line-height:1;letter-spacing:-.035em}
-.fig .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim2);margin-top:12px;line-height:1.55}
 
 /* ---------------- sections ---------------- */
 section{padding:92px 0;border-bottom:1px solid var(--line)}
@@ -257,14 +248,6 @@ footer{padding:70px 0 96px}
   </div>
 </div>
 
-<div class="figs">
-  <div class="wrap">
-    <div class="fig"><div class="v">180M<span class="sig">+</span></div><div class="k">accounts protected by cryptography I co-designed</div></div>
-    <div class="fig"><div class="v">700<span class="sig">+</span></div><div class="k">live government sites and services running on it</div></div>
-    <div class="fig"><div class="v">ZERO</div><div class="k">nonconformities, ISO 27001, first attempt</div></div>
-    <div class="fig"><div class="v">4<span class="sig">HR</span></div><div class="k">detection to contained, AI insider incident</div></div>
-  </div>
-</div>
 
 <!-- ============ 01 PROOF ============ -->
 <section id="proof"><div class="wrap">
