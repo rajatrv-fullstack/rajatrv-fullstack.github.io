@@ -3,15 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rajat Ravinder Varuni</title>
+<title>Rajat Ravinder Varuni, CISO</title>
 <meta name="description" content="CISO. Co-designed the cryptography behind Login.gov. AWS shipped two of my solutions as product features. The full record, with receipts.">
 <meta property="og:title" content="Rajat Ravinder Varuni">
 <meta property="og:description" content="CISO, cryptographer, builder. The full record, with receipts.">
 <meta name="theme-color" content="#0A0A0A">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<link rel="canonical" href="https://thefullstackciso.com/">
+<meta property="og:url" content="https://thefullstackciso.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://thefullstackciso.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RV. Rajat Ravinder Varuni, CISO. TheFullStackCISO.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://thefullstackciso.com/og.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="fonts/archivo-black-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/archivo-variable-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/archivo-black-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-mono-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/ibm-plex-mono-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 :root{
   --ink:#0A0A0A;
   --panel:#141414;
@@ -19,7 +39,7 @@
   --line2:#363636;
   --paper:#F1F0EB;
   --dim:#8C8C86;
-  --dim2:#5E5E58;
+  --dim2:#8A8A84;
   --sig:#FF4A1C;
   --disp:'Archivo Black','Arial Black',sans-serif;
   --sans:'Archivo',-apple-system,'Helvetica Neue',sans-serif;
@@ -43,22 +63,52 @@ img{max-width:100%}
 /* ---------------- masthead ---------------- */
 .mast{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,10,10,.94);backdrop-filter:blur(6px);z-index:60}
 .mast .wrap{display:flex;justify-content:space-between;align-items:center;height:54px}
-.mast .n{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.mast .n{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:inherit;text-decoration:none}
 .mast .n b{color:var(--sig);font-weight:400}
 .mast nav{display:flex;gap:24px}
 .mast nav a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none}
 .mast nav a:hover{color:var(--sig)}
-@media(max-width:820px){.mast nav{display:none}}
+@media(max-width:820px){
+  .mast .wrap{height:auto;flex-wrap:wrap;padding-top:12px;padding-bottom:6px;row-gap:6px}
+  .mast nav{width:100%;overflow-x:auto;gap:18px;white-space:nowrap;padding-bottom:6px;scrollbar-width:none}
+  .mast nav::-webkit-scrollbar{display:none}
+}
+section,.paper,.band{scroll-margin-top:64px}
+@media(max-width:820px){section,.paper,.band{scroll-margin-top:100px}}
+a:focus-visible{outline:2px solid var(--sig);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--sig);color:#0A0A0A;padding:10px 14px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.skip:focus{left:12px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{
+  html,body,.paper,.band,figure{background:#fff!important;color:#000!important}
+  body{font-size:11pt}
+  .mast,.skip{display:none}
+  .hero{padding-top:0}
+  .band,.paper{color:#000!important;border-top:1px solid #000;border-bottom:1px solid #000}
+  .band .q,.head h2,.hero h1,.fig .v,.aside .n{color:#000!important}
+  .hero h1 em,.sig,.tr .y{color:#000!important}
+  .lab,.aside .t,.fig .k,figcaption,.head p,.entry p,.tr p,.sub,.fine,.meta dt,.band .attr,.paper .lab,.paper .aside .t{color:#222!important}
+  .entry b{color:#000!important}
+  figure{border:1px solid #999;page-break-inside:avoid}
+  figure img{max-height:3.2in;width:auto}
+  .certs img{height:56px}
+  a{color:#000!important;text-decoration:none}
+  .src a{border:1px solid #999}
+  .src a::after{content:" " attr(href);opacity:1;text-transform:none;letter-spacing:0}
+  section{padding:28px 0;page-break-inside:auto}
+  .entry,.tr{page-break-inside:avoid}
+}
 
 /* ---------------- hero ---------------- */
 .hero{padding-top:76px}
 .hero h1{
   font-family:var(--disp);font-weight:400;
-  font-size:clamp(54px,13.6vw,182px);line-height:.83;letter-spacing:-.05em;
+  font-size:clamp(44px,13.6vw,182px);line-height:.83;letter-spacing:-.05em;
   text-transform:uppercase;margin:0 0 38px;
 }
 .hero h1 em{font-style:normal;display:block;color:var(--sig)}
 .heroGrid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;padding-bottom:62px}
+.heroGrid>*{min-width:0}
 @media(max-width:940px){.heroGrid{grid-template-columns:1fr;gap:34px}}
 .claim{font-size:clamp(19px,2.4vw,26px);line-height:1.4;margin:0 0 24px;max-width:33ch;font-weight:500}
 .claim b{font-weight:700;box-shadow:inset 0 -.42em 0 rgba(255,74,28,.22)}
@@ -66,7 +116,7 @@ img{max-width:100%}
 .meta{border-top:2px solid var(--sig);padding-top:20px}
 .meta dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:11px 24px;font-size:14.5px}
 .meta dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim2);padding-top:4px}
-.meta dd{margin:0}
+.meta dd{margin:0;overflow-wrap:anywhere}
 .meta a{color:var(--sig);text-decoration:none;border-bottom:1px solid rgba(255,74,28,.4)}
 .meta a:hover{background:var(--sig);color:#0A0A0A;border-bottom-color:var(--sig)}
 
@@ -118,20 +168,20 @@ figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-tra
 .band{background:var(--sig);color:#0A0A0A;padding:78px 0;border-bottom:1px solid var(--line)}
 .band .q{font-family:var(--disp);font-weight:400;
   font-size:clamp(25px,4.1vw,50px);line-height:1.03;letter-spacing:-.035em;margin:0 0 26px;max-width:19ch}
-.band .attr{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(10,10,10,.72)}
+.band .attr{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#0A0A0A}
 .band .bg{display:grid;grid-template-columns:190px 1fr;gap:44px}
 @media(max-width:880px){.band .bg{grid-template-columns:1fr;gap:16px}}
-.band .lab{color:rgba(10,10,10,.6)}
+.band .lab{color:#0A0A0A}
 
 /* ---------------- paper band ---------------- */
 .paper{background:var(--paper);color:#0A0A0A;padding:92px 0;border-bottom:1px solid var(--line)}
 .paper .head h2{color:#0A0A0A}
 .paper .head p{color:#4A4A44}
-.paper .lab{color:#8A8A80}
+.paper .lab{color:#6B6B64}
 .paper .entry{border-top-color:#D8D7D0}
 .paper .entry p{color:#39392F}
 .paper .entry b{color:#0A0A0A}
-.paper .aside .t{color:#8A8A80}
+.paper .aside .t{color:#6B6B64}
 .paper .src a{color:#4A4A44;border-color:#C9C8C0}
 .paper .src a:hover{color:#F1F0EB;background:#0A0A0A;border-color:#0A0A0A}
 .certs{display:flex;flex-wrap:wrap;gap:24px 26px;align-items:center;margin:2px 0 26px}
@@ -146,7 +196,7 @@ figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-tra
 .tr{display:grid;grid-template-columns:190px 1fr;gap:44px;padding:26px 0;border-bottom:1px solid var(--line)}
 @media(max-width:880px){.tr{grid-template-columns:1fr;gap:8px}}
 .tr .y{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--sig);padding-top:5px}
-.tr h4{margin:0 0 6px;font-size:19.5px;font-weight:700;letter-spacing:-.015em}
+.tr h3{margin:0 0 6px;font-size:19.5px;font-weight:700;letter-spacing:-.015em}
 .tr p{margin:0;color:var(--dim);max-width:66ch;font-size:15.5px}
 
 /* ---------------- footer ---------------- */
@@ -160,10 +210,11 @@ footer{padding:70px 0 96px}
 </head>
 <body>
 
-<div class="mast">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast" id="top">
   <div class="wrap">
-    <span class="n">Ravinder Varuni<b>.</b></span>
-    <nav>
+    <a class="n" href="#top">Ravinder Varuni<b>.</b></a>
+    <nav aria-label="Sections">
       <a href="#proof">Proof</a>
       <a href="#commercial">Commercial</a>
       <a href="#recognition">Recognition</a>
@@ -173,8 +224,9 @@ footer{padding:70px 0 96px}
       <a href="#path">Path</a>
     </nav>
   </div>
-</div>
+</header>
 
+<main id="main">
 <div class="hero wrap">
   <h1>Rajat<br><em>Ravinder<br>Varuni</em></h1>
   <div class="heroGrid">
@@ -197,8 +249,8 @@ footer{padding:70px 0 96px}
         <dt>Now</dt><dd>Carnegie Mellon CISO Executive Certificate, Cohort 27</dd>
         <dt>Find me</dt>
         <dd>
-          <a href="https://www.linkedin.com/in/rajatrv/">LinkedIn</a> &nbsp;
-          <a href="https://github.com/rajatrv-fullstack">GitHub</a>
+          <a href="https://www.linkedin.com/in/rajatrv/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;
+          <a href="https://github.com/rajatrv-fullstack" target="_blank" rel="noopener">GitHub</a>
         </dd>
       </dl>
     </div>
@@ -240,8 +292,8 @@ footer{padding:70px 0 96px}
         agencies and states.
       </p>
       <div class="src">
-        <a href="https://login.gov/docs/login-gov-roadmap-august-2026.pdf">Login.gov roadmap, Aug 2026</a>
-        <a href="https://www.gsa.gov/about-us/newsroom/news-releases/gsas-logingov-launches-passportbased-identity-verification-08202025">GSA press release</a>
+        <a href="https://login.gov/docs/login-gov-roadmap-august-2026.pdf" target="_blank" rel="noopener">Login.gov roadmap, Aug 2026</a>
+        <a href="https://www.gsa.gov/about-us/newsroom/news-releases/gsas-logingov-launches-passportbased-identity-verification-08202025" target="_blank" rel="noopener">GSA press release</a>
       </div>
     </div>
   </div>
@@ -261,7 +313,7 @@ footer{padding:70px 0 96px}
         authorizations followed for Login.gov, cloud.gov and vote.gov.
       </p>
       <div class="src">
-        <a href="https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/fy2008/m08-05.pdf">OMB Memorandum M-08-05</a>
+        <a href="https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/fy2008/m08-05.pdf" target="_blank" rel="noopener">OMB Memorandum M-08-05</a>
       </div>
     </div>
   </div>
@@ -281,9 +333,9 @@ footer{padding:70px 0 96px}
         AWS Security Blog that year, and was cited publicly by Amazon's CTO.
       </p>
       <div class="src">
-        <a href="https://aws.amazon.com/about-aws/whats-new/2017/10/aws-waf-now-supports-geographic-match/">The AWS release</a>
-        <a href="https://aws.amazon.com/blogs/security/how-to-use-aws-waf-to-filter-incoming-traffic-from-embargoed-countries/">The original post</a>
-        <a href="https://aws.amazon.com/blogs/security/how-to-automate-import-third-party-threat-intelligence-feeds-into-amazon-guardduty/">GuardDuty automation</a>
+        <a href="https://aws.amazon.com/about-aws/whats-new/2017/10/aws-waf-now-supports-geographic-match/" target="_blank" rel="noopener">The AWS release</a>
+        <a href="https://aws.amazon.com/blogs/security/how-to-use-aws-waf-to-filter-incoming-traffic-from-embargoed-countries/" target="_blank" rel="noopener">The original post</a>
+        <a href="https://aws.amazon.com/blogs/security/how-to-automate-import-third-party-threat-intelligence-feeds-into-amazon-guardduty/" target="_blank" rel="noopener">GuardDuty automation</a>
       </div>
     </div>
   </div>
@@ -404,7 +456,7 @@ footer{padding:70px 0 96px}
 
   <div class="split" style="margin-bottom:56px">
     <figure>
-      <img src="img/board-book.jpeg" alt="The Modern CISO Network Board Book page as carried in the New York Times" loading="lazy">
+      <img src="img/board-book.jpeg" srcset="img/board-book-412.webp 412w, img/board-book-825.webp 825w" sizes="(max-width:880px) calc(100vw - 40px), 440px" width="825" height="1100" alt="The Modern CISO Network Board Book page as carried in the New York Times" loading="lazy" decoding="async">
       <figcaption>The Board Book, carried in the New York Times</figcaption>
     </figure>
     <div>
@@ -429,11 +481,11 @@ footer{padding:70px 0 96px}
         the post is still live twelve years later.
       </p>
       <div class="src" style="margin-top:18px">
-        <a href="https://x.com/AWSEvents/status/532439404476764160">The AWS announcement</a>
+        <a href="https://x.com/AWSEvents/status/532439404476764160" target="_blank" rel="noopener">The AWS announcement</a>
       </div>
     </div>
     <figure>
-      <img src="img/aws-tweet.jpg" alt="Amazon Web Services announcing the re:Invent 2014 hackathon winners" loading="lazy">
+      <img src="img/aws-tweet.jpg" srcset="img/aws-tweet-550.webp 550w, img/aws-tweet-1100.webp 1100w" sizes="(max-width:880px) calc(100vw - 40px), 520px" width="1100" height="618" alt="Amazon Web Services announcing the re:Invent 2014 hackathon winners" loading="lazy" decoding="async">
       <figcaption>re:Invent 2014, the winners on stage</figcaption>
     </figure>
   </div>
@@ -456,7 +508,7 @@ footer{padding:70px 0 96px}
       </p>
       <div class="lab">Lisa McClain, Senior Editor, McGraw Hill Professional Computing</div>
       <div class="src">
-        <a href="evidence/mcgraw-hill-letter-2021.pdf">The letter</a>
+        <a href="evidence/mcgraw-hill-letter-2021.pdf" target="_blank" rel="noopener">The letter</a>
       </div>
     </div>
   </div>
@@ -470,7 +522,7 @@ footer{padding:70px 0 96px}
         each other on air, which is the best outcome that segment can produce.
       </p>
       <div class="src">
-        <a href="https://cisoseries.com/why-solve-your-problems-when-we-can-just-scare-you/">The episode</a>
+        <a href="https://cisoseries.com/why-solve-your-problems-when-we-can-just-scare-you/" target="_blank" rel="noopener">The episode</a>
       </div>
     </div>
   </div>
@@ -487,12 +539,12 @@ footer{padding:70px 0 96px}
   </div>
 
   <div class="certs">
-    <img src="img/CISSP.png" alt="ISC2 CISSP" loading="lazy">
-    <img src="img/CISM.png" alt="ISACA CISM" loading="lazy">
-    <img src="img/HITRUST-CCSFP.png" alt="HITRUST Certified CSF Practitioner" loading="lazy">
-    <img src="img/GIAC-GPEN.png" alt="GIAC GPEN, Penetration Tester" loading="lazy">
-    <img src="img/AWS-Security-Specialty.png" alt="AWS Certified Security, Specialty" loading="lazy">
-    <img src="img/CCISO.png" alt="EC-Council Certified CISO" loading="lazy">
+    <img src="img/CISSP.png" width="220" height="220" alt="ISC2 CISSP" loading="lazy" decoding="async">
+    <img src="img/CISM.png" width="220" height="220" alt="ISACA CISM" loading="lazy" decoding="async">
+    <img src="img/HITRUST-CCSFP.png" width="220" height="220" alt="HITRUST Certified CSF Practitioner" loading="lazy" decoding="async">
+    <img src="img/GIAC-GPEN.png" width="220" height="220" alt="GIAC GPEN, Penetration Tester" loading="lazy" decoding="async">
+    <img src="img/AWS-Security-Specialty.png" width="220" height="220" alt="AWS Certified Security, Specialty" loading="lazy" decoding="async">
+    <img src="img/CCISO.png" width="220" height="160" alt="EC-Council Certified CISO" loading="lazy" decoding="async">
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px">
     <span class="chip on">CEH</span>
@@ -528,7 +580,7 @@ footer{padding:70px 0 96px}
     <div>
       <h3>ISAO 300-2</h3>
       <p>Co-authored a published standard on automating cyber threat intelligence sharing, for the ISAO Standards Organization.</p>
-      <div class="src"><a href="https://www.isao.org/products/isao-300-2-automated-cyber-threat-intelligence-sharing/">The standard</a></div>
+      <div class="src"><a href="https://www.isao.org/products/isao-300-2-automated-cyber-threat-intelligence-sharing/" target="_blank" rel="noopener">The standard</a></div>
     </div>
   </div>
 
@@ -545,8 +597,8 @@ footer{padding:70px 0 96px}
         the book would likely not have reached market otherwise.
       </p>
       <div class="src">
-        <a href="https://www.sans.org/white-papers/33373/">One Touch Disaster Recovery, SANS</a>
-        <a href="evidence/mcgraw-hill-letter-2021.pdf">The publisher's letter</a>
+        <a href="https://www.sans.org/white-papers/33373/" target="_blank" rel="noopener">One Touch Disaster Recovery, SANS</a>
+        <a href="evidence/mcgraw-hill-letter-2021.pdf" target="_blank" rel="noopener">The publisher's letter</a>
       </div>
     </div>
   </div>
@@ -586,9 +638,9 @@ footer{padding:70px 0 96px}
         V2C.org, a 501(c)(3), and built and shipped its products.
       </p>
       <div class="src">
-        <a href="https://certscore.org">certscore.org</a>
-        <a href="https://honorlibrary.org">honorlibrary.org</a>
-        <a href="https://v2c.org">v2c.org</a>
+        <a href="https://certscore.org" target="_blank" rel="noopener">certscore.org</a>
+        <a href="https://honorlibrary.org" target="_blank" rel="noopener">honorlibrary.org</a>
+        <a href="https://v2c.org" target="_blank" rel="noopener">v2c.org</a>
       </div>
     </div>
   </div>
@@ -614,7 +666,7 @@ footer{padding:70px 0 96px}
         password manager. Both are running. I wrote both.
       </p>
       <div class="src">
-        <a href="https://github.com/rajatrv-fullstack">GitHub</a>
+        <a href="https://github.com/rajatrv-fullstack" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </div>
@@ -627,23 +679,25 @@ footer{padding:70px 0 96px}
     <div><h2>How it<br>went</h2></div>
   </div>
   <div class="tl">
-    <div class="tr"><div class="y">2026</div><div><h4>Carnegie Mellon, Heinz College</h4><p>CISO Executive Certificate, Cohort 27. Six months, in progress.</p></div></div>
-    <div class="tr"><div class="y">2024 to now</div><div><h4>CISO and Senior Director, Operations, SuccessKPI</h4><p>Security, IT, SRE, DevOps and a 24x7 NOC across two continents. Quarterly board reporting, with risk priced in dollars rather than heat maps.</p></div></div>
-    <div class="tr"><div class="y">2023</div><div><h4>Principal Security Architect, then CISO</h4><p>SuccessKPI. Two promotions in nineteen months.</p></div></div>
-    <div class="tr"><div class="y">2017 to 2023</div><div><h4>Security Architect, Amazon Web Services</h4><p>Login.gov cryptography, GuardDuty automation, WAF geographic filtering. Zero direct reports, and the work reached 180 million accounts.</p></div></div>
-    <div class="tr"><div class="y">2015 to 2017</div><div><h4>Security Officer, 18F</h4><p>The TIC 2.0 Overlay pilot. FedRAMP authorizations followed for Login.gov, cloud.gov and vote.gov.</p></div></div>
-    <div class="tr"><div class="y">2006 to 2017</div><div><h4>Systems, network engineering and IT management</h4><p>Veris Group, Valiant Solutions, Dataprise, Community Connections, AACAP, Anacomp, University of Maryland Global Campus.</p></div></div>
-    <div class="tr"><div class="y">2000 to 2006</div><div><h4>Michigan Technological University, then George Washington University</h4><p>B.S. and M.S. in Computer Science.</p></div></div>
+    <div class="tr"><div class="y">2026</div><div><h3>Carnegie Mellon, Heinz College</h3><p>CISO Executive Certificate, Cohort 27. Six months, in progress.</p></div></div>
+    <div class="tr"><div class="y">2024 to now</div><div><h3>CISO and Senior Director, Operations, SuccessKPI</h3><p>Security, IT, SRE, DevOps and a 24x7 NOC across two continents. Quarterly board reporting, with risk priced in dollars rather than heat maps.</p></div></div>
+    <div class="tr"><div class="y">2023</div><div><h3>Principal Security Architect, then CISO</h3><p>SuccessKPI. Two promotions in nineteen months.</p></div></div>
+    <div class="tr"><div class="y">2017 to 2023</div><div><h3>Security Architect, Amazon Web Services</h3><p>Login.gov cryptography, GuardDuty automation, WAF geographic filtering. Zero direct reports, and the work reached 180 million accounts.</p></div></div>
+    <div class="tr"><div class="y">2015 to 2017</div><div><h3>Security Officer, 18F</h3><p>The TIC 2.0 Overlay pilot. FedRAMP authorizations followed for Login.gov, cloud.gov and vote.gov.</p></div></div>
+    <div class="tr"><div class="y">2006 to 2017</div><div><h3>Systems, network engineering and IT management</h3><p>Veris Group, Valiant Solutions, Dataprise, Community Connections, AACAP, Anacomp, University of Maryland Global Campus.</p></div></div>
+    <div class="tr"><div class="y">2000 to 2006</div><div><h3>Michigan Technological University, then George Washington University</h3><p>B.S. and M.S. in Computer Science.</p></div></div>
   </div>
 </div></section>
 
+</main>
+
 <footer><div class="wrap">
   <div class="fl">
-    <a href="https://www.linkedin.com/in/rajatrv/">LinkedIn</a>
-    <a href="https://github.com/rajatrv-fullstack">GitHub</a>
-    <a href="https://certscore.org">CertScore</a>
-    <a href="https://honorlibrary.org">Honor Library</a>
-    <a href="https://v2c.org">V2C.org</a>
+    <a href="https://www.linkedin.com/in/rajatrv/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/rajatrv-fullstack" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://certscore.org" target="_blank" rel="noopener">CertScore</a>
+    <a href="https://honorlibrary.org" target="_blank" rel="noopener">Honor Library</a>
+    <a href="https://v2c.org" target="_blank" rel="noopener">V2C.org</a>
   </div>
   <div class="lab">Rajat Ravinder Varuni &nbsp;/&nbsp; Aldie, Virginia &nbsp;/&nbsp; U.S. citizen</div>
   <p class="fine">
